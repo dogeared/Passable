@@ -1,10 +1,16 @@
 var InformationView = function() {};
 
-InformationView.t = Titanium.UI.create2DMatrix().scale(0);
-InformationView.t1 = Titanium.UI.create2DMatrix().scale(1.1);
-InformationView.t2 = Titanium.UI.create2DMatrix();
-InformationView.a = Titanium.UI.createAnimation();
+InformationView.transformZero = Titanium.UI.create2DMatrix().scale(0);
+InformationView.transformBig = Titanium.UI.create2DMatrix().scale(1.1);
+InformationView.transformNormal = Titanium.UI.create2DMatrix();
+
+InformationView.animationZero = Titanium.UI.createAnimation({transform: InformationView.transformZero, duration: 200});
+InformationView.animationBig = Titanium.UI.createAnimation({transform: InformationView.transformBig, duration: 200});
+InformationView.animationNormal = Titanium.UI.createAnimation({transform: InformationView.transformNormal, duration: 200});
+
+
 InformationView.timeoutId = 0;
+
 InformationView.infoText = 
   "Passable\n\n" +
   "Developed by Micah Silverman\n" +
@@ -35,7 +41,7 @@ InformationView.clipWin = Titanium.UI.createWindow({
   height: 400,
   width: 300,
   borderRadius: 10,
-  transform: this.t
+  transform: InformationView.transformZero
 });
 
 InformationView.clipWin.orientationModes = [
@@ -63,20 +69,18 @@ InformationView.scrollView = Titanium.UI.createScrollView({
 InformationView.scrollView.add(InformationView.clipLabel);
   
 InformationView.setupInfoWin = function(callback) {
-  // InformationView.a.transform = InformationView.t1;
-  // InformationView.a.duration = 500;
   InformationView.clipWin.add(InformationView.scrollView);
-  InformationView.a.addEventListener('complete', function() {
-    InformationView.clipWin.animate({transform: InformationView.t2, duration: 500});
+
+  InformationView.animationBig.addEventListener('complete', function() {
+    InformationView.clipWin.animate(InformationView.animationNormal);
   });
+
   InformationView.scrollView.addEventListener('singletap', function() {
-    InformationView.a.transform = InformationView.t;
-    InformationView.clipWin.close(InformationView.a);
-    setTimeout(callback, 500);
+    InformationView.clipWin.close(InformationView.animationZero);
+    setTimeout(callback, 200);
   });
 };
   
 InformationView.showInfoWin = function() {
-  InformationView.a.transform = InformationView.t1;
-  InformationView.clipWin.open(InformationView.a);
+  InformationView.clipWin.open(InformationView.animationBig);
 };

@@ -8,13 +8,11 @@ InformationView.animationZero = Titanium.UI.createAnimation({transform: Informat
 InformationView.animationBig = Titanium.UI.createAnimation({transform: InformationView.transformBig, duration: 200});
 InformationView.animationNormal = Titanium.UI.createAnimation({transform: InformationView.transformNormal, duration: 200});
 
-
 InformationView.timeoutId = 0;
 
 InformationView.infoText = 
   "Passable\n\n" +
   "Developed by Micah Silverman\n" +
-  "With the smooth stylings\nof Robert Malko\n" +
   "Copyright 2011\n" +
   "http://afitnerd.com\n\n" +
   "Javascript Sha1 implementation\nby Paul Johnston, et al.\n" +

@@ -3,7 +3,7 @@ Ti.include("models/settings_model.js");
 Ti.include("controllers/settings_controller.js");
 Ti.include("views/animations_view.js");
 Ti.include("views/information_view.js");
-Titanium.UI.setBackgroundColor('#000');
+Titanium.UI.setBackgroundColor('#FFF');
 
 SettingsController.init();
 

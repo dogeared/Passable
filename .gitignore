@@ -1,3 +1,7 @@
 tmp
 build
 build.log
+.DS_Store
+api.jsca
+.fastdev.lock
+.project

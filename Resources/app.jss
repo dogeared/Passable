@@ -9,7 +9,7 @@
 }
 
 #mainTab {
-  icon: 'images/tabs/KS_nav_ui.png';
+  icon: 'images/tabs/padlock.png';
   titleid: 'main_ui_title';
 }
 
@@ -20,7 +20,7 @@
 }
 
 #settingsTab {
-  icon: 'images/tabs/KS_nav_ui.png';
+  icon: 'images/tabs/preferences.png';
   titleid: 'settings_ui_title';
 }
 
@@ -30,6 +30,6 @@
 }
 
 #infoTab {
-  icon: 'images/tabs/KS_nav_ui.png';
+  icon: 'images/tabs/lightbulb.png';
   titleid: 'info_ui_title';
 }

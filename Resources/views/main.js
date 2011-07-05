@@ -3,7 +3,6 @@ Ti.include("animations_view.js");
 Ti.include("_main.js");
 
 main.getCoords = function() {
-  Ti.API.info("Orientation: " + Ti.UI.orientation);
   switch (Ti.UI.orientation) {
     case Titanium.UI.PORTRAIT:
     case Titanium.UI.UPSIDE_PORTRAIT:

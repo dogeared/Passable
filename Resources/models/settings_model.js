@@ -1,12 +1,12 @@
-var SettingsModel = function() { };
+var SettingsModel = {};
 
 SettingsModel.rowData = [
-  {title: 'Show Base',        hasCheck: false, selectedColor: '#fff'},
-  {title: 'Show Identifier',  hasCheck: false, selectedColor: '#fff'},
-  {title: 'Show Password',    hasCheck: false, selectedColor: '#fff'},
-  {title: 'Clear Base',       hasCheck: true,  selectedColor: '#fff'},
-  {title: 'Clear Identifier', hasCheck: true,  selectedColor: '#fff'},
-  {title: 'Save Settings',    hasCheck: false, selectedColor: '#fff'}
+  {title: 'Show Secret',    hasCheck: false, selectedColor: '#fff'},
+  {title: 'Show Nickname',  hasCheck: true,  selectedColor: '#fff'},
+  {title: 'Show Password',  hasCheck: false, selectedColor: '#fff'},
+  {title: 'Clear Secret',   hasCheck: false, selectedColor: '#fff'},
+  {title: 'Clear Nickname', hasCheck: true,  selectedColor: '#fff'},
+  {title: 'Save Settings',  hasCheck: false, selectedColor: '#fff'}
 ];
 
 SettingsModel.rowDataIndex = {
@@ -20,4 +20,6 @@ SettingsModel.rowDataIndex = {
   
 SettingsModel.baseValue = '';
 
-SettingsModel.halfValue = false;
+var s = function() {
+  return SettingsModel;
+}

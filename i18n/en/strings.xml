@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="main_ui_title">Passable</string>
+  <string name="settings_ui_title">Settings</string>
+  <string name="info_ui_title">Info</string>
+  <string name="superman_strong">Superman Strong - 40 chars</string>
+  <string name="extremely_strong">Extremely Strong - 28 chars</string>
+  <string name="very_strong">Very Strong - 20 chars</string>
+  <string name="strong">Strong - 14 chars</string>
+</resources>

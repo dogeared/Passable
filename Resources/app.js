@@ -57,7 +57,7 @@ app.tabGroup.addTab(app.settingsTab);
 app.tabGroup.addTab(app.infoTab);
 
 // hack to deal with redraw bug when starting in landscape mode
-if (Ti.UI.orientation === Titanium.UI.LANDSCAPE_LEFT || Ti.UI.orientation === Titanium.UI.LANDSCAPE_RIGHT) {
+if (Ti.UI.orientation && (Ti.UI.orientation === Titanium.UI.LANDSCAPE_LEFT || Ti.UI.orientation === Titanium.UI.LANDSCAPE_RIGHT)) {
   app.tabGroup.setActiveTab(1);
   app.tabGroup.open({
    transition:Titanium.UI.iPhone.AnimationStyle.CURL_UP

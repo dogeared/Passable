@@ -1,6 +1,6 @@
 Ti.include("../helpers/sha1.js");
 Ti.include("animations_view.js");
-Ti.include("_main.js");
+Ti.include("main_coords.js");
 
 main.getCoords = function() {
   switch (Ti.UI.orientation) {
@@ -34,7 +34,7 @@ main.generateHandler = function(encoder, plaintext, divisor) {
     main.id.value = '';
   }
 
-  Ti.UI.Clipboard.setText(pwResult);
+  Ti.UI.Clipboard.setText(main.pw.value);
   AnimationsView.showClipWin();
 };
 

@@ -6,7 +6,8 @@ SettingsModel.rowData = [
   {title: 'Show Password',  hasCheck: false, selectedColor: '#fff'},
   {title: 'Clear Secret',   hasCheck: false, selectedColor: '#fff'},
   {title: 'Clear Nickname', hasCheck: true,  selectedColor: '#fff'},
-  {title: 'Save Settings',  hasCheck: false, selectedColor: '#fff'}
+  {title: 'Save Secret',    hasCheck: false,  selectedColor: '#fff'},
+  {title: 'Save Settings',  hasCheck: true, selectedColor: '#fff'}
 ];
 
 SettingsModel.rowDataIndex = {
@@ -15,11 +16,12 @@ SettingsModel.rowDataIndex = {
   showPassword: 2,
   clearBase: 3,
   clearIdentifier: 4,
-  saveSettings: 5
+  saveSecret: 5,
+  saveSettings: 6
 };
   
 SettingsModel.baseValue = '';
 
 var s = function() {
   return SettingsModel;
-}
+};

@@ -4,7 +4,7 @@ var settings = {
     tableview: {
       left: 20,
       right: 20,
-      height: 260
+      height: 310
     }    
   },
   landscapeCoords: {
@@ -29,8 +29,8 @@ settings.getCoords = function() {
     default:
       return settings.portraitCoords;
       break;
-  }  
-}
+  };  
+};
 
 settings.setupWin = function() {
   var coords = settings.getCoords();
@@ -58,9 +58,10 @@ settings.setupWin = function() {
     s.rowData[index].hasCheck = row.hasCheck;
   
     Ti.App.fireEvent('settings_controller:update_settings');
+    Ti.App.fireEvent('settings_controller:update_base_val');
     Ti.App.fireEvent('main:update_fields');
   }); 
-}
+};
 
 Ti.Gesture.addEventListener('orientationchange', function(e) {
   var coords = settings.getCoords();

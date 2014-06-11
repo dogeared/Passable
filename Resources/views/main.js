@@ -15,8 +15,8 @@ main.getCoords = function() {
     default:
       return main.portraitCoords;
       break;   
-  }
-}
+  };
+};
 
 main.generateHandler = function(encoder, plaintext, divisor) {
   var settings = main.win.s();
@@ -163,18 +163,18 @@ main.setupWin = function() {
     else {
       main.generateHandler(b64_sha1, plaintext, 2);
     }
-  }
+  };
   
   main.imageViewP.addEventListener('click', imageViewHandler);
   main.imageViewL.addEventListener('click', imageViewHandler);
   
   main.base.addEventListener('blur', function() {
-    if (settings.rowData[settings.rowDataIndex.saveSettings].hasCheck) {
+    if (settings.rowData[settings.rowDataIndex.saveSecret].hasCheck) {
       settings.baseValue = main.base.value;
       Ti.App.fireEvent('settings_controller:update_base_val');
     }
   });
-}
+};
 
 Ti.App.addEventListener('main:update_fields', function(e) {
   var settings = main.win.s();

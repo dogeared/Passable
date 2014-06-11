@@ -1,8 +1,8 @@
-#appname: Passable
-#publisher: msilverman2
-#url: http://afitnerd.com
-#image: appicon.png
-#appid: com.afitnerd.Passable
-#desc: undefined
-#type: mobile
-#guid: c6d0a5ae-2fb5-45e6-9828-cd187dd11365
+#appname:Passable
+#publisher:A Fit Nerd
+#url:http://afitnerd.com
+#image:appicon.png
+#appid:com.afitnerd.Passable
+#desc:easy, secure password management
+#type:mobile
+#guid:c6d0a5ae-2fb5-45e6-9828-cd187dd11365

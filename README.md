@@ -1,9 +1,13 @@
 ## On Passwords
 
 Memorizing lots of passwords sucks.
+
 Writing down passwords sucks.
+
 Using the same password sucks.
+
 Server side password solutions suck.
+
 Two factor authentication is expensive.
 And, therefore, sucks.
 

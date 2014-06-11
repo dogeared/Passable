@@ -1,18 +1,28 @@
-Welcome to your Appcelerator Titanium Mobile Project
+## On Passwords
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+Memorizing lots of passwords sucks.
+Writing down passwords sucks.
+Using the same password sucks.
+Server side password solutions suck.
+Two factor authentication is expensive.
+And, therefore, sucks.
 
+## How it works:
 
+With Passable, you remember a long secret phrase that only you know. Something like:
 
-----------------------------------
-Stuff our legal folk make us say:
+```
+The rain in spain falls mainly on the plain
+(But make up your own)
+```
 
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
+Whenever you need a password, you use an account nickname. For instance, for a gmail account, the identifier might be:
 
-Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+```
+gmail bob
+(But make up your own)
+```
 
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
+Javascript Sha1 implementation by Paul Johnston, et al. http://pajhome.org.uk/crypt/md5
 
+Original idea by Brad Tilley, 16 Systems http://16s.us/sha1_pass/
